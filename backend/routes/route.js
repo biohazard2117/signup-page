@@ -1,4 +1,3 @@
-const { request } = require('express');
 const express = require('express');
 const router = express.Router();
 const signUpTemplateCopy = require('../models/SignupModels')
@@ -13,10 +12,10 @@ router.post('/signup', (req,res) => {
 
     signUpUser.save()
     .then(result => {
-        res.json(result);
+        res.send(result);
     })
     .catch(err => {
-        console.json(err);
+        console.log(err);
     });
 });
 
