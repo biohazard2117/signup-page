@@ -8,12 +8,12 @@ const cors = require('cors');
 dotenv.config();
 
 
-mongoose.connect(process.env.DATABASE_ACCESS, () => console.log('database connected'))
+mongoose.connect(process.env.DATABASE_ACCESS, () => console.log('database connected'));
 
 app.use(express.json());
 app.use(cors());
 app.use('/app',routesUrls);
 
-app.listen(4000, ()=> {
+app.listen(process.env.PORTS || 4000, ()=> {
     console.log('server is up and running');
 })

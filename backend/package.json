@@ -4,7 +4,8 @@
   "description": "Sign Up Application",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Utkarsh Maurya",
   "license": "ISC",
